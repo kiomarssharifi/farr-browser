@@ -10,7 +10,7 @@ You need Node.js 18 or newer.
 
 ```bash
 npm install -g farr-browser
-npx playwright install chromium        # downloads the browser Playwright drives
+farr-browser install-browser           # downloads the browser this version was built for
 
 farr-browser read https://example.com  # the page as markdown
 farr-browser open https://example.com  # a live session: prints a session id and a look
