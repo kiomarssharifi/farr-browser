@@ -1,0 +1,9 @@
+farr-browser
+Copyright 2026 Kiomars Sharifi
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It depends on, but does not include, the following open-source packages,
+which are installed separately by npm under their own licenses:
+  - Playwright (Apache License 2.0), Microsoft Corporation
+  - Model Context Protocol TypeScript SDK (MIT License)

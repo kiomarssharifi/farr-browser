@@ -1,0 +1,22 @@
+{
+  "id": "wikipedia",
+  "description": "Structured facts from Wikipedia article pages.",
+  "domains": ["wikipedia.org"],
+  "intents": {
+    "infobox": {
+      "description": "The label and value of every row in an article's infobox (the summary box at the top right).",
+      "input": {
+        "title": { "type": "string", "required": true, "spaces": "_", "description": "article title, e.g. Ada Lovelace" },
+        "lang": { "type": "string", "default": "en", "description": "language edition, e.g. en, de, fr" }
+      },
+      "url": "https://{lang}.wikipedia.org/wiki/{title}",
+      "format": "html",
+      "rows": "table.infobox tr",
+      "fields": {
+        "label": { "selector": ["th.infobox-label", "th"] },
+        "value": { "selector": ["td.infobox-data", "td"] }
+      },
+      "required": ["label", "value"]
+    }
+  }
+}

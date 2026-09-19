@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use farr-browser, please cite it as below."
+title: "farr-browser: a polite browser for AI agents"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Sharifi
+    given-names: Kiomars
+keywords:
+  - browser automation
+  - AI agents
+  - Model Context Protocol
+  - robots.txt
+abstract: >-
+  A browser for AI agents that keeps a page open between calls. The agent sees
+  one line per actionable element, each with a ref, acts on refs, and is told
+  what measurably changed. Stale refs are refused, controls that buy, pay,
+  delete or send are refused unless explicitly allowed, confirm() dialogs are
+  dismissed by default, robots.txt is honoured and requests are paced per site.
+  It also reads pages as markdown, downloads files, runs declarative site
+  skills, uses proxies the user brings, and serves all of this over MCP.

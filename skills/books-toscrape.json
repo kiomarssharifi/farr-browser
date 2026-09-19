@@ -1,0 +1,23 @@
+{
+  "id": "books-toscrape",
+  "description": "The catalogue of books.toscrape.com, a public sandbox site built for practising web extraction.",
+  "domains": ["books.toscrape.com"],
+  "intents": {
+    "catalogue": {
+      "description": "One page of the catalogue: title, price, availability and link for each book.",
+      "input": {
+        "page": { "type": "integer", "default": "1", "description": "catalogue page number, 1 to 50" }
+      },
+      "url": "https://books.toscrape.com/catalogue/page-{page}.html",
+      "format": "html",
+      "rows": "article.product_pod",
+      "fields": {
+        "title": { "selector": "h3 a", "attr": "title" },
+        "price": { "selector": ".price_color", "type": "number" },
+        "availability": { "selector": ".availability" },
+        "url": { "selector": "h3 a", "attr": "href", "type": "url" }
+      },
+      "required": ["title", "price"]
+    }
+  }
+}

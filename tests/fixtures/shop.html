@@ -1,0 +1,11 @@
+<!doctype html>
+<html><head><title>Shop</title></head>
+<body>
+<h1>A product</h1>
+<p id="status">idle</p>
+<button id="buy" type="button" onclick="document.getElementById('status').textContent='bought'; document.body.appendChild(document.createElement('hr'))">Buy now</button>
+<button type="button" onclick="document.getElementById('status').textContent='looked'; document.body.appendChild(document.createElement('hr'))">Show details</button>
+<form method="post" action="/checkout">
+  <button type="submit">Continue</button>
+</form>
+</body></html>

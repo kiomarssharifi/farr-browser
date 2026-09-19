@@ -1,0 +1,7 @@
+node_modules/
+*.log
+*.jpg
+*.png
+.DS_Store
+npm-debug.log*
+.farr-browser/

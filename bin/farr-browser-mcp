@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+'use strict';
+require('../lib/mcp').main().catch((e) => {
+  process.stderr.write(`farr-browser-mcp: ${e.stack || e.message}\n`);
+  process.exit(1);
+});
