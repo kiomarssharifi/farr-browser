@@ -38,5 +38,13 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "playwright": "^1.63.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiomarssharifi/farr-browser.git"
+  },
+  "homepage": "https://github.com/kiomarssharifi/farr-browser",
+  "bugs": {
+    "url": "https://github.com/kiomarssharifi/farr-browser/issues"
   }
 }

@@ -1,0 +1,23 @@
+# Publishes to npm with trusted publishing (OIDC): no npm token is stored anywhere.
+# npm accepts the upload only from this repository and this workflow file.
+name: publish
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@latest
+      - run: npm ci
+      - run: npm publish --provenance --access public
