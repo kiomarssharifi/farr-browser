@@ -6,7 +6,7 @@ It runs on your own machine, uses the open-source [Playwright](https://playwrigh
 
 ## Quickstart (5 minutes)
 
-You need Node.js 18 or newer.
+You need Node.js 20 or newer.
 
 ```bash
 npm install -g farr-browser
